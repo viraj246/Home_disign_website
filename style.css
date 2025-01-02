@@ -54,6 +54,9 @@
 .img-container{
     width: 100%;
     display: flex;
+    animation-name: slide;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
 
 
 }
@@ -92,4 +95,31 @@ button:hover span{
 }
 button:hover{
     border: none;
+}
+@keyframes logorotation{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.navbar img{
+    animation-name: logorotation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+@keyframes slide{
+    0%,100%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-25%);
+    }
+    50%{
+        transform: translateX(-50%);
+    }
+    75%{
+        transform: translateX(-75%);
+    }
 }
